@@ -64,9 +64,13 @@ def to_octal(num):
         remainder = num % 8
         num //= 8
         push_stack(remainder)
+        print(stack)
     return pop_all()
 
 
-res = to_octal(65)
+decimal_num = 65
 
-print(res)
+print(f"decimal number: {decimal_num}\n")
+octal_num = to_octal(decimal_num)
+
+print(f"\noctal number: {octal_num}")

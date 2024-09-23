@@ -35,8 +35,6 @@ def pop_stack(index):
             if is_popped == True:
                 if i < SIZE - 1:
                     stack[i] = stack[i+1]
-                # stack[i-1] = stack[i]
-                # stack[i] = None
             continue
         data = stack[i]
         if i == SIZE - 1:
@@ -69,6 +67,7 @@ def reverse_word(word):
     new_word = ""
     for i in range(word_len):
         push_stack(word[i])
+        print(stack)
     for i in range(word_len - 1, -1, -1):
         char = pop_stack(i)
         new_word += char
@@ -87,4 +86,9 @@ def is_palindrome(word):
     return False
 
 
-print(is_palindrome("abcba"))
+input_word = input("검사할 단어: ")
+print()
+res_bool = is_palindrome(input_word)
+res_str = "Yes" if res_bool == True else "No"
+print()
+print(res_str)

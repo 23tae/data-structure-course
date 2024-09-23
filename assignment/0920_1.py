@@ -25,7 +25,7 @@ katok = [('민수', 200), ('철희', 190), ('영재', 180), ('경수', 30)]
 
 if __name__ == "__main__":
     while True:
+        print(f"현재 친구목록: {katok}\n")
         data = input("추가할 친구: ")
-        count = int(input("카톡 획수: "))
+        count = int(input("카톡 횟수: "))
         find_and_insert_data(data, count)
-        print(katok)

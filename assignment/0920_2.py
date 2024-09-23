@@ -46,10 +46,9 @@ def pop_stack(index):
     return data
 
 
-SIZE = 2
+SIZE = 6
 stack = [None] * SIZE
 top = -1
-print(stack)
 
 
 def reverse_word(word):
@@ -57,14 +56,14 @@ def reverse_word(word):
     new_word = ""
     for i in range(word_len):
         push_stack(word[i])
-    print(stack)
+        print(stack)
     for i in range(word_len - 1, -1, -1):
         char = pop_stack(i)
-        print(char)
         new_word += char
     return new_word
 
 
-input_word = "ab"
+input_word = "abcd"
+print(f"input: {input_word}\n")
 output_word = reverse_word(input_word)
-print(output_word)
+print(f"\noutput: {output_word}")
