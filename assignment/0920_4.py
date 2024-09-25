@@ -54,14 +54,6 @@ def pop_all():
     return result
 
 
-def pop_all():
-    result = ""
-    for i in range(top, -1, -1):
-        char = pop_stack(i)
-        result += str(char)
-    return result
-
-
 def reverse_word(word):
     word_len = len(word)
     new_word = ""
